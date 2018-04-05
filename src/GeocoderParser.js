@@ -65,7 +65,7 @@ class GeocoderParser {
       province: this.getComponent('administrative_area_level_1'),
       postal_code: this.getComponent('postal_code'),
       country: this.getComponent('country', true),
-      latlng: (this.data.geometry.location) ? this.data.geometry.location : null
+      coords: (this.data.geometry.location) ? this.data.geometry.location : null
     }
   }
 }
