@@ -14,6 +14,15 @@ class GeocoderParser {
     return filterComponents(this.data.address_components, key, useShort);
   }
 
+  getStreetAddress() {
+    if(this.getComponent('street_address')) {
+      return this.getComponent('street_address');
+    }
+    if(this.getComponent('street_number') && this.getComponent('route')) {
+      return this.getComponent('street_number') + ' ' + this.getComponent('route');
+    }
+  }
+
   isType(type = []) {
     return filterType(this.data, type);
   }
@@ -49,12 +58,13 @@ class GeocoderParser {
   parse() {
     return {
       formatted: this.data.formatted_address,
-      address: this.getComponent('street_address'),
+      address: this.getStreetAddress(),
       city: this.getComponent('locality'),
       neighborhood: (this.getComponent('neighborhood')) ? this.getComponent('neighborhood') : this.getComponent('sublocality_level_1'),
       district: this.getComponent('administrative_area_level_2'),
       province: this.getComponent('administrative_area_level_1'),
       postal_code: this.getComponent('postal_code'),
+      country: this.getComponent('country'),
     }
   }
 }
