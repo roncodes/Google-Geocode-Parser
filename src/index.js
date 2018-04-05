@@ -1,2 +1,2 @@
-module.exports = require('./GeocodeParser.js');
+module.exports = require('./GeocoderParser.js');
 

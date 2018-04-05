@@ -1,18 +1,18 @@
-# Google Geocode Parser
+# Google Geocoder Parser
 
 This is a utility to help parse raw geocoded data returned from Google Geocode API services.
 
 ## Usage
 
 ```
-$ npm install --save google-geocode-parser
+$ npm install --save-dev @roncodes/geocoder-parser
 ```
 
 ```
-const GeocodeParser = require('google-geocode-parser');
+const GeocoderParser = require('geocoder-parser');
 const request = await fetch('https://maps.googleapis.com/maps/api/geocode/json?address=247%20water%20street%20brooklyn');
 const results = await request.json();
-const parsed = new GeocodeParser(results);
+const parsed = new GeocoderParser(results);
 ```
 
 ## API

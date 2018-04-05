@@ -1,12 +1,12 @@
 const { filterType, filterComponents} = require('./utils/filters.js');
 
-class GeocodeParser {
+class GeocoderParser {
   constructor(data = {}) {
     this.data = this.__internals_GetResults(data);
   }
 
   __internals_GetResults(data) {
-    const { results = null } = data || {};
+    const results = data;
     return results ? results[0] : null;
   }
 
@@ -50,4 +50,4 @@ class GeocodeParser {
 }
 
 
-module.exports = GeocodeParser;
+module.exports = GeocoderParser;

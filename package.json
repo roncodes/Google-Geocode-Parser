@@ -1,8 +1,9 @@
 {
-  "name": "google-geocode-parser",
+  "name": "@roncodes/geocoder-parser",
   "version": "1.0.1",
   "description": "A helper utility to help parse geocoded addresses from Google",
   "main": "src/index.js",
+  "moduleName": "GeocoderParser",
   "scripts": {
     "test": "jest --coverage",
     "test:dev": "jest --watchAll"
@@ -12,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/seripap/Google-Geocode-Parser"
+    "url": "git+https://github.com/roncodes/geocoder-parser"
   },
   "keywords": [
     "google",
@@ -20,9 +21,15 @@
     "parser"
   ],
   "author": "Daniel Seripap",
+  "contributors": [
+      {
+        "name": "Ronald A. Richardson",
+        "email": "ron@rarbuilt.com"
+      }
+  ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/seripap/Google-Geocode-Parser/issues"
+    "url": "https://github.com/roncodes/geocoder-parser/issues"
   },
-  "homepage": "https://github.com/seripap/Google-Geocode-Parser#readme"
+  "homepage": "https://github.com/roncodes/geocoder-parser#readme"
 }
