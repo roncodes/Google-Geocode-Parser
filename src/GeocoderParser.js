@@ -21,6 +21,9 @@ class GeocoderParser {
     if(this.getComponent('street_number') && this.getComponent('route')) {
       return this.getComponent('street_number') + ' ' + this.getComponent('route');
     }
+    if(this.getComponent('route')) {
+      return this.getComponent('route');
+    }
   }
 
   isType(type = []) {
